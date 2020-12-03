@@ -15,14 +15,11 @@ function displayColors(colors) {
 window.SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
 
 function start() {
-  // see if their browser supports this
   if (!window.SpeechRecognition) {
     console.log('Sorry your browser does not support speech reco. ');
     return;
   }
-  // it does work
   console.log('Starting...');
-  // make a new speech reco
   const recognition = new SpeechRecognition();
   recognition.continuous = true;
   recognition.interimResults = true;
